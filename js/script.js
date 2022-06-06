@@ -99,11 +99,29 @@ const hintText = document.querySelector(".hint");
 const refreshBtn = document.querySelector(".refresh-word")
 const checkBtn = document.querySelector(".check-word")
 const inputField = document.querySelector("input")
+const timeText = document.querySelector(".time b")
 let correctWord;
+let timer;
 
+const initTimer = maxTime => {
+
+   timer = setInterval(() =>{
+
+    if(maxTime > 0) 
+      {
+        maxTime--;
+        timeText.innerHTML = maxTime;
+      }
+
+ 
+
+   },1000)
+
+}
 
 
 const initGame = () =>{
+    initTimer(30);
     let randomObj = words[Math.floor(Math.random() * words.length)];
     let wordArray = randomObj.word.split("");
     for (let i  = wordArray.length-1 ; i  >0 ; i--) {
@@ -115,8 +133,12 @@ const initGame = () =>{
     }
     wordText.innerText =  wordArray.join("");
     hintText.innerText = randomObj.hint;
+
     console.log(wordArray,randomObj.word);
     correctWord = randomObj.word.toLocaleLowerCase();
+    inputField.value = "";
+    inputField.setAttribute("maxlength" , correctWord.length);
+
 
  
 }
