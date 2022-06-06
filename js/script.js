@@ -99,6 +99,7 @@ const hintText = document.querySelector(".hint");
 const refreshBtn = document.querySelector(".refresh-word")
 const checkBtn = document.querySelector(".check-word")
 const inputField = document.querySelector("input")
+let correctWord;
 
 
 
@@ -115,20 +116,29 @@ const initGame = () =>{
     wordText.innerText =  wordArray.join("");
     hintText.innerText = randomObj.hint;
     console.log(wordArray,randomObj.word);
+    correctWord = randomObj.word.toLocaleLowerCase();
 
  
 }
 
-function checkWord(){
+initGame();
+
+refreshBtn.addEventListener('click',initGame);
+
+
+const checkWord = () =>{
+    let userWord = inputField.value.toLocaleLowerCase();
+    console.log(userWord);
+    if(correctWord !== userWord) return alert(`OOps! ${userWord} is not a Correct Word !! You are not a WEEB`);
+    alert(`Congrats! ${userWord.toUpperCase()} is  a Correct Word !! You are  a WEEB`);
+    initGame();
+     
+
 
      
 
 }
 
-
-initGame();
-
-refreshBtn.addEventListener('click',initGame);
 
 
 checkBtn.addEventListener('click',checkWord)
