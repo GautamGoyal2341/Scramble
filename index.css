@@ -82,7 +82,18 @@ input{
      outline: none;
      padding: 15px 0;
      font-size: 17px;
+     color: white;
      border-radius: 5px;
      width: calc(100% / 2 - 8px);
+
+}
+
+.refresh-word{
+    background: #6c757d;
+}
+
+.check-word{
+ 
+     background: #5372F0;
 
 }
