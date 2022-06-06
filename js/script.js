@@ -97,6 +97,8 @@ let words = [
 const wordText = document.querySelector(".word");
 const hintText = document.querySelector(".hint");
 const refreshBtn = document.querySelector(".refresh-word")
+const checkBtn = document.querySelector(".check-word")
+const inputField = document.querySelector("input")
 
 
 
@@ -113,8 +115,22 @@ const initGame = () =>{
     wordText.innerText =  wordArray.join("");
     hintText.innerText = randomObj.hint;
     console.log(wordArray,randomObj.word);
+
+ 
 }
 
+function checkWord(){
+
+     
+
+}
+
+
 initGame();
+
+refreshBtn.addEventListener('click',initGame);
+
+
+checkBtn.addEventListener('click',checkWord)
 
 
