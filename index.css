@@ -9,7 +9,8 @@
   }
 
 body{
-    background-color: #5271E9;
+    background: url(./images/finalnaru.jpg);
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,20 +19,38 @@ body{
 
 .container{
     
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: #b2b2b2;
+    background-color: rgba(0, 0, 0, .3);
    
     width: 500px;
     /* margin-left: 500px; */
     border-radius: 7px;
     /* margin-top: 25vh; */
 }
-
+.word{
+    color: yellow;
+}
 .container h2{
+ 
+    /* background: url(./images/naru.ico); */
+    background-repeat: no-repeat;
     font-size: 25px;
     font-weight: 500;
     padding: 18px 25px;
-    border-bottom: 1px solid #ccc ;
+    border-bottom: 2px solid #ccc ;
+    color: rgb(188, 188, 19);
+   
+   
 }
+
+.realwo{
+    display: flex;
+}
+
+/* .wrs{
+    visibility: hidden;
+} */
 
 
 .content{
@@ -51,6 +70,7 @@ body{
 
 .details{
     margin: 25px 0px 20px;
+    color: fff;
 }
 
 .details p{
@@ -88,12 +108,24 @@ input{
 
 }
 
+
 .refresh-word{
     background: #6c757d;
 }
 
+.refresh-word:hover{
+    color: #6c757d;
+    background: white;
+}
+
+
 .check-word{
- 
+    
      background: #5372F0;
 
+}
+
+.check-word:hover{
+    color: #5372F0;
+    background: white;
 }
