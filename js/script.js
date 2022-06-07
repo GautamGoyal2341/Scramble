@@ -104,14 +104,18 @@ let correctWord;
 let timer;
 
 const initTimer = maxTime => {
-
+    clearInterval(timer);
    timer = setInterval(() =>{
+    
 
     if(maxTime > 0) 
       {
         maxTime--;
-        timeText.innerHTML = maxTime;
+       return timeText.innerHTML = maxTime;
       }
+      clearInterval(timer);
+      alert(`Times Up! ${correctWord.toUpperCase()} was a Correct Word !! You are Not  a WEEB`);
+      initGame();
 
  
 
