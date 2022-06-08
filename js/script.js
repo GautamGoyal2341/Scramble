@@ -94,14 +94,37 @@ let words = [
 ]
 
 
+
+const overlay = document.querySelector('#overlay');
 const wordText = document.querySelector(".word");
 const hintText = document.querySelector(".hint");
 const refreshBtn = document.querySelector(".refresh-word")
 const checkBtn = document.querySelector(".check-word")
 const inputField = document.querySelector("input")
 const timeText = document.querySelector(".time b")
+// const modalOpen = document.querySelector("#show-modal-btn")
+// const closeeModal = document.querySelector("#close-modal-btn");
 let correctWord;
 let timer;
+
+// function openmodal(){
+    
+//         overlay.style.display = "block";
+
+// }
+
+// closeeModal.addEventListener('click',() => {
+//     overlay.style.display = "none";
+
+// }) 
+
+
+document.querySelector('#close-modal-btn').addEventListener("click" , ()=> {
+    overlay.style.display = "none";
+    initGame();
+});
+
+
 
 const initTimer = maxTime => {
     clearInterval(timer);
@@ -119,7 +142,7 @@ const initTimer = maxTime => {
 
  
 
-   },1000)
+   },1000);
 
 }
 
@@ -155,8 +178,22 @@ refreshBtn.addEventListener('click',initGame);
 const checkWord = () =>{
     let userWord = inputField.value.toLocaleLowerCase();
     console.log(userWord);
-    if(correctWord !== userWord) return alert(`OOps! ${userWord} is not a Correct Word !! You are not a WEEB`);
-    alert(`Congrats! ${userWord.toUpperCase()} is  a Correct Word !! You are  a WEEB`);
+    console.log(correctWord);
+
+    if(correctWord === userWord){
+        overlay.style.display = "block";
+    }else{
+        alert(`OOps! ${userWord} is not a Correct Word !! You are not a WEEB`);
+    }
+
+    
+    //  alert(`Congrats! ${userWord.toUpperCase()} is  a Correct Word !! You are  a WEEB`);
+ 
+
+
+
+
+    // modalOpen.onclick = openmodal;
     initGame();
      
 
@@ -164,6 +201,12 @@ const checkWord = () =>{
      
 
 }
+
+
+
+// closeModal.onclick = closeModal;
+
+
 
 
 
