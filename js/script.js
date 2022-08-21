@@ -95,7 +95,7 @@ let words = [
 
 
 
-const overlay = document.querySelector('#overlay');
+// const overlay = document.querySelector('#overlay');
 const wordText = document.querySelector(".word");
 const hintText = document.querySelector(".hint");
 const refreshBtn = document.querySelector(".refresh-word")
@@ -107,7 +107,7 @@ const timeText = document.querySelector(".time b")
 let correctWord;
 let timer;
 
-// function openmodal(){
+// function openmodal(){    
     
 //         overlay.style.display = "block";
 
@@ -119,10 +119,10 @@ let timer;
 // }) 
 
 
-document.querySelector('#close-modal-btn').addEventListener("click" , ()=> {
-    overlay.style.display = "none";
-    initGame();
-});
+// document.querySelector('#close-modal-btn').addEventListener("click" , ()=> {
+//     overlay.style.display = "none";
+//     initGame();
+// });
 
 
 
@@ -181,7 +181,7 @@ const checkWord = () =>{
     console.log(correctWord);
 
     if(correctWord === userWord){
-        overlay.style.display = "block";
+        alert(`HuraaaaH! ${userWord} is  a Correct Word !! You are a WEEB`);
     }else{
         alert(`OOps! ${userWord} is not a Correct Word !! You are not a WEEB`);
     }
