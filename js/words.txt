@@ -91,4 +91,26 @@ var words = [
         word: "library",
         hint: "Place containing collection of books"
     },
+     {
+        word: "love",
+        hint: "To express feelings"
+    },
+     {
+        word: "cry",
+        hint: "heartbroken"
+    },
+     {
+        word: "sad",
+        hint: "why are u upset"
+    },
+     {
+        word: "frontend",
+        hint: "Development"
+    },
+     {
+        word: "Instagram",
+        hint: "Where people can post photos"
+    },
+
+
 ]
